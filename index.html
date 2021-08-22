@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ToDo App</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.min.css" />
+</head>
+
+<body>
+  <div class="l-container">
+    <header class="header">
+      <h1 class="header-logo">ToDo App</h1>
+      <button id="deleteCompleted" class="fa fa-trash button button--delete">Delete Completed</button>
+      <button id="deleteNonComplete" class="fa fa-trash button button--delete">Delete All</button>
+      <div class="tasksInput">
+        <input type="text" id="input" placeholder="Buy Milk and Bread..." />
+        <button id="button">
+          <i class="fa fa-plus"></i>
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="todo">
+        <h2 class="todo-title">To-Do:</h2>
+        <ul class="todo-list" id="todo"></ul>
+      </section>
+      <section class="todo todo--completed">
+        <h2 class="todo-title">Completed:</h2>
+        <ul class="todo-list" id="completed"></ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Built with <i class="fa fa-heart"></i> by
+        <a href="https://github.com/nabia-sheikh" target="_blank"><i class="fa fa-github"></i>Nabia Sheikh</a>
+      </p>
+      <a class="github-button" href="https://github.com/Nabia-Sheikh/To-do-app/fork" target="_blank"
+        data-icon="octicon-repo-forked" data-show-count="true"
+        aria-label="Fork nabia-sheikh/To-do-app on GitHub">Fork</a>
+      <a class="github-button" href="https://github.com/Nabia-Sheikh/To-do-app" target="_blank" data-icon="octicon-star"
+        data-show-count="true" aria-label="Star nabia-sheikh/To-do-app on GitHub">Star</a>
+    </footer>
+  </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDcFpbKxtlP7_KCfU2ZxjLCSh0fHIl4AHM",
+    authDomain: "todo-app-e45d1.firebaseapp.com",
+    projectId: "todo-app-e45d1",
+    storageBucket: "todo-app-e45d1.appspot.com",
+    messagingSenderId: "946949974745",
+    appId: "1:946949974745:web:6b570dbd7f86d287faacc8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+  <!-- Scripts -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
